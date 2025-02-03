@@ -7,7 +7,7 @@ app = Flask(__name__)
 def landing():
     return '''
         <h1>Welcome</h1>
-        <p>For documentation, see: </p>
+        <p>For documentation, see: <a href=https://github.com/nategoodman88/fe3hapi>here</a></p>
     '''
 
 @app.route('/characters')
