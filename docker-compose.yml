@@ -1,0 +1,12 @@
+services:
+  flask:
+    build:
+      dockerfile: docker/Dockerfile
+      context: .
+    container_name: fe3hapi
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      FLASK_APP: app.py

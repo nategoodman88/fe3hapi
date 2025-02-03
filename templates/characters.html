@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Character List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>House</th>
+                <th>Crest</th>
+                <th>Starting Class</th>
+                <th>Base Level</th>
+                <th>Base HP</th>
+                <th>Base STR</th>
+                <th>Base MAG</th>
+                <th>Base DEX</th>
+                <th>Base SPD</th>
+                <th>Base LCK</th>
+                <th>Base DEF</th>
+                <th>Base RES</th>
+                <th>Base CHA</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for character in characters %}
+            <tr>
+                <td>{{ character.name }}</td>
+                <td>{{ character.house }}</td>
+                <td>{{ character.crest }}</td>
+                <td>{{ character.startingclass }}</td>
+                <td>{{ character.baselevel }}</td>
+                <td>{{ character.basehp }}</td>
+                <td>{{ character.basestr }}</td>
+                <td>{{ character.basemag }}</td>
+                <td>{{ character.basedex }}</td>
+                <td>{{ character.basespd }}</td>
+                <td>{{ character.baselck }}</td>
+                <td>{{ character.basedef }}</td>
+                <td>{{ character.baseres }}</td>
+                <td>{{ character.basecha }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
