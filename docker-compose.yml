@@ -1,12 +1,35 @@
 services:
   flask:
     build:
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/Flask/Dockerfile
       context: .
+    depends_on:
+        postgres:
+          condition: service_healthy
+
     container_name: fe3hapi
     ports:
       - "5000:5000"
     volumes:
-      - .:/app
-    environment:
-      FLASK_APP: app.py
+      - .:/app   
+
+  postgres:
+    build:
+      dockerfile: docker/Postgres/Dockerfile
+      context: .
+    container_name: fe3hdb
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env  
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+    driver: local
