@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  bun:
+    build:
+      context: .
+      dockerfile: "docker/bun/Dockerfile"
+      args:
+        - UID=1000
+    ports:
+      - "3000:3000"
+    environment:
+      - BUN_ENV=dev
+    volumes:
+      - .:/home/bun/app
