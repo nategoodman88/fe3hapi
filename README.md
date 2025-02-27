@@ -1,6 +1,6 @@
 # ⚔️ Fire Emblem Three Houses API ⚔️
 
-An **Elysia** framework API for Intelligent Systems' **Fire Emblem Three Houses**. All rights to **Nintendo** and **Intelligent Systems**.
+An **Elysia** framework API for **Intelligent Systems'** **Fire Emblem Three Houses**. All rights to **Nintendo** and **Intelligent Systems**.
 
 ![Elysia](https://img.shields.io/badge/Elysia-framework-brightgreen)
 ![Bun](https://img.shields.io/badge/Bun-runtime-yellow)
@@ -15,7 +15,7 @@ An **Elysia** framework API for Intelligent Systems' **Fire Emblem Three Houses*
 
 ### ⚙️ Prerequisites:
 
-- A UNIX operating system
+- A UNIX operating system OR
 - [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) for Windows users
 - [Docker](https://www.docker.com/)
 
@@ -49,5 +49,3 @@ Powered by Bun: Fast runtime for agile battles.
 Prettier & ESLint for clean, elegant code (no messy battlefields here!)
 
 SQLite: Simple and reliable database storage.
-
-🔥May the Crest of Flames guide you!🔥
