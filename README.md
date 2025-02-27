@@ -21,7 +21,14 @@ An **Elysia** framework API for **Intelligent Systems'** **Fire Emblem Three Hou
 
 ### 🚀 Launch the App:
 
-Use the pre-configured **Docker** setup to start the app.
+Ensure Bun packages are installed/up to date:
+
+```bash
+./bun install
+./bun update
+```
+
+Then use the pre-configured **Docker** setup to start the app:
 
 1. Clone the repository and change into the directory:
 
@@ -38,7 +45,7 @@ cd fe3hapi
 
 ### 🗡️ Available Calls:
 
-/characters - Returns a list of characters
+/characters: Returns a list of characters
 
 ### 📜 Features:
 
